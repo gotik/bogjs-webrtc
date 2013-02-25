@@ -48,7 +48,7 @@ function onLocalStreamReady(event) {
 }
 
 // websocket
-var socket = io.connect('http://192.168.1.26:8080');
+var socket = io.connect('http://127.0.0.1:8080');
 
 socket.on('resNew', function(data) {
 	dom.newChannel.innerHTML = data;

@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <title>WebRTC Test</title>
+<style>
+#local-video {
+	width: 242px;
+}
+#new-channel {
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+input, button {
+	border: 1px solid gray;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webit-border-radius: 0;
+	padding: 4px 10px;
+}
+</style>
 <div>
-	<h1 id="new-channel"></h1>
-	<button onclick="reqNew()">new</button>
+	<button onclick="reqNew()">new</button><span id="new-channel"></span>
 </div>
 <div>
 	<input id="join-channel" type="text">
@@ -10,5 +26,5 @@
 </div>
 <video id="local-video" autoplay></video>
 <video id="remote-video" autoplay></video>
-<script src="http://192.168.1.26:8080/socket.io/socket.io.js"></script>
+<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
 <script src="main.js"></script>
